@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="discrption" content="parallax one page" />
+    <meta name="keyword" content="agency, business, corporate, creative, freelancer, interior, joomla template, K2 Blog, minimal, modern, multipurpose, personal, portfolio, responsive, simple" />
+
+    <!--  Title -->
+    <title>Khushavant - Portfolio (Contact)</title>
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+
+    <!-- custom styles (optional) -->
+    <link href="assets/css/plugins.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="v-light hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
+    <div data-dsn-temp="light"></div>
+
+
+    <div class="preloader">
+        <div class="preloader-after"></div>
+        <div class="preloader-before"></div>
+        <div class="preloader-block">
+            <div class="title">Getting Things Ready !</div>
+            <div class="percent">0</div>
+            <div class="loading">loading...</div>
+        </div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Music Logo -->
+<div class="music-logo" id="music-logo">
+    <i class="fas fa-music"></i>
+</div>
+<audio id="background-music" src="assets/img/love_song.mp3"></audio>
+<script src="path/to/your/main.js"></script>
+
+<!-- Music Logo -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const musicLogo = document.getElementById("music-logo");
+        const audio = document.getElementById("background-music");
+
+        // Check if music state is stored in session storage
+        const isMusicPlaying = sessionStorage.getItem("isMusicPlaying");
+        if (isMusicPlaying === "true") {
+            audio.play().then(() => {
+                console.log('Music resumed playing');
+                musicLogo.classList.add('active'); // Add visual cue when music is playing
+            }).catch(error => {
+                console.error('Error playing audio:', error);
+            });
+        }
+
+        // Ensure the audio can play
+        audio.volume = 0.5;
+
+        musicLogo.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    console.log('Music started playing');
+                    musicLogo.classList.add('active'); // Add visual cue when music is playing
+                    sessionStorage.setItem("isMusicPlaying", "true"); // Store play state
+                }).catch(error => {
+                    console.error('Error playing audio:', error);
+                });
+            } else {
+                audio.pause();
+                console.log('Music paused');
+                musicLogo.classList.remove('active'); // Remove visual cue when music is paused
+                sessionStorage.setItem("isMusicPlaying", "false"); // Store play state
+            }
+        });
+
+        // Debugging
+        audio.addEventListener('error', function (e) {
+            console.error('Audio error:', e);
+        });
+
+        audio.addEventListener('play', function () {
+            console.log('Audio is playing');
+            musicLogo.classList.add('active'); // Add visual cue when music is playing
+        });
+
+        audio.addEventListener('pause', function () {
+            console.log('Audio is paused');
+            musicLogo.classList.remove('active'); // Remove visual cue when music is paused
+        });
+    });
+</script>
+<style>
+    .music-logo {
+        position: fixed;
+        top: 18%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: #0cbfe9;
+        z-index: 1000; /* Ensure it's above other elements */
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        perspective: 1000px;
+    }
+
+    .music-logo:hover {
+        color: #ff4081;
+        transform: translateY(-50%) rotateY(30deg) scale(1.2);
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 64, 129, 0.7); */
+    }
+
+    .music-logo.active {
+        color: #ff4081;
+        animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translateY(-50%) rotateY(0deg);
+        }
+        100% {
+            transform: translateY(-50%) rotateY(360deg);
+        }
+    }
+
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px #ff4081, 0 0 10px #ff4081, 0 0 15px #ff4081, 0 0 20px #ff4081, 0 0 25px #ff4081, 0 0 30px #ff4081, 0 0 35px #ff4081;
+        }
+        100% {
+            text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+        }
+    }
+
+    .music-logo i {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+</style>
+<!-- Music End -->
+
+    <!-- Nav Bar -->
+    <div class="dsn-nav-bar">
+        <div class="site-header">
+            <div class="extend-container">
+                <div class="inner-header">
+                    <div class="main-logo">
+                        <a href="index.html">
+                            <img class="dark-logo" src="assets/img/logoML.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <nav class=" accent-menu main-navigation">
+                    <ul class="extend-container">
+                        <li class="custom-drop-down">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="custom-drop-down">
+                            <a href="#">Projects</a>
+                            <ul>
+                                <li><a href="#">under progress</a></li>
+                            </ul>
+                        </li>
+                        <li class="custom-drop-down">
+                            <a href="#">Portfolio</a>
+                            <ul>
+                                <li><a href="work.html">Photos</a></li>
+                                <li><a href="certificates.html">E - certificates</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="custom-drop-down">
+                            <a href="pubg.html">Pubg</a>
+                        </li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="custom-drop-down">
+                            <a href="#">Extras</a>
+                            <ul>
+                                <li><a href="#">Take a Quiz</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header-top header-top-hamburger">
+            <div class="header-container">
+                <div class="logo main-logo">
+                    <a href="index.html">
+                        <img class="dark-logo" src="assets/img/logoML.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="menu-icon" data-dsn="parallax" data-dsn-move="5">
+                    <div class="icon-m">
+                        <i class="menu-icon-close fas fa-times"></i>
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>
+
+                    <div class="text-menu">
+                        <div class="text-button">Menu</div>
+                        <div class="text-open">Open</div>
+                        <div class="text-close">Close</div>
+                    </div>
+                </div>
+
+                <div class="nav">
+                    <div class="inner">
+                        <div class="nav__content">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-content">
+                    <div class="inner-content">
+                        <address class="v-middle">
+                            <span>Khushavant Wagh</span>
+                            <span>Pune, India</span>
+                            <span>khushavantwagh2002@gmail.com</span>
+                        </address>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Nav Bar -->
+
+    <main class="main-root">
+        <div id="dsn-scrollbar">
+            <header style="background: #202020;">
+                <div class="container header-hero ">
+                    <div class="row ">
+                        <div class="col-lg-6 ">
+                            <div class="contenet-hero">
+                                <h5 style="color: #fff;">Let's Tock <span style='font-size:100px;'>&#128512;</span> </h5>
+                                <h1 style="color: #fff;">Contact </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrapper ">
+                <div class="root-contact ">
+                    <div class="container-fluid ">
+                        <iframe class="mapp " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5496068837197!2d73.93377417372126!3d18.54924446830069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3d80f4a08b9%3A0x358559a0dfe007f9!2sKharadi%20by%20pass%2C%20MH%20SH%2027%2C%20Tukaram%20Nagar%2C%20Kharadi%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1720893881612!5m2!1sen!2sin"
+                            width="100% " height="500 " frameborder="0 " style="border:5px solid #c4c4c4; " allowfullscreen=" " aria-hidden="false " tabindex="0 "></iframe>
+                    </div>
+
+                    <div class="container section-margin ">
+                        <div class="row ">
+                            <div class="col-lg-6 ">
+                                <div class="box-info-contact ">
+                                    <h3>Start a new project?</h3>
+                                    <h5>Reach out to us - at </h5>
+                                    <p>...</p>
+
+                                    <ul>
+                                        <li>
+                                            <span>Phone</span>
+                                            <a href="# ">+91 (74***) ***82</a>
+                                        </li>
+                                        <li>
+                                            <span>Email</span>
+                                            <a href="# ">khushavantwagh2002@gmail.com</a>
+                                        </li>
+                                        <li>
+                                            <span>Address</span>
+                                            <a href="# ">Kharadi, Pune, India</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 ">
+                                <div class="form-box ">
+                                    <h3>Write a Comment</h3>
+                                    <form id="contact-form " class="form " method="post " action="http://theme.dsngrid.com/droow-l/contact.php " data-toggle="validator ">
+                                        <div class="messages "></div>
+                                        <div class="input__wrap controls ">
+                                            <div class="form-group ">
+
+                                                <div class="entry ">
+                                                    <label>What's your name?</label>
+                                                    <input id="form_name " type="text " name="name " placeholder="Type your name " required="required " data-error="name is required. ">
+                                                </div>
+                                                <div class="help-block with-errors "></div>
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <div class="entry ">
+                                                    <label>What's your Email?</label>
+                                                    <input id="form_email " type="email " name="email " placeholder="Type your Email Address " required="required " data-error="Valid email is required. ">
+                                                </div>
+                                                <div class="help-block with-errors "></div>
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <div class="entry ">
+                                                    <label>Message ?</label>
+                                                    <textarea id="form_message " class="form-control " name="message " placeholder="Tell us about you and the world " required="required " data-error="Please,leave us a message. "></textarea>
+                                                </div>
+                                                <div class="help-block with-errors "></div>
+                                            </div>
+
+                                            <div class="image-zoom " data-dsn="parallax ">
+                                                <button>Send Message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="contact-up section-margin section-padding ">
+                    <div class="container ">
+                        <div class="c-wapp ">
+                            <a href="work.html " class="effect-ajax ">
+                                <span class="hiring ">
+                  portfolio
+                </span>
+                                <span class="career ">
+                  See More Works
+                </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <div class="info ">
+                        <div class="contact-footer ">
+                            <a href="# " class="phone image-zoom " data-dsn="parallax " style="text-decoration: none; ">+91 70*** ***70</a>
+                            <a href="# " class="email image-zoom " data-dsn="parallax " style="text-decoration: none; ">mukulsingh3344@gmail.com</a>
+                        </div>
+                        <div class="copyright-social ">
+                            <p>Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                Mukul Singh</p>
+                            <ul>
+                                <li class="image-zoom " data-dsn="parallax "><a href="https://www.instagram.com/_khushavant_/" target="_blank ">Instagram</a>
+                                </li>
+                                <li class="image-zoom " data-dsn="parallax "><a href="https://www.github.com/Khushavant21" target="_blank ">Github</a></li>
+                                <li class="image-zoom " data-dsn="parallax "><a href="https://www.instagram.com/_khushavant_/" target="_blank ">Linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <!-- Wait Loader -->
+    <div class="wait-loader ">
+        <div class="loader-inner ">
+            <div class="loader-circle ">
+                <div class="loader-layer "></div>
+            </div>
+        </div>
+    </div>
+    <!-- // Wait Loader -->
+
+
+    <!-- cursor -->
+    <div class="cursor ">
+
+        <div class="cursor-helper cursor-view ">
+            <span>VIEW</span>
+        </div>
+
+        <div class="cursor-helper cursor-close ">
+            <span>Close</span>
+        </div>
+
+        <div class="cursor-helper cursor-link "></div>
+    </div>
+    <!-- End cursor -->
+
+    <!-- Optional JavaScript -->
+    <script src="assets/js/jquery-3.1.1.min.js "></script>
+    <script src="assets/js/plugins.js "></script>
+    <script src="assets/js/dsn-grid.js "></script>
+
+    <script src="assets/js/custom.js "></script>
+
+</body>
+
+</html>
